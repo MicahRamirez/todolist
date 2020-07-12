@@ -1,15 +1,18 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { ToDoContainer } from "../components/ToDoContainer";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <div>
+      <ToDoContainer />
+      <style jsx global>{`
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+      `}</style>
+    </div>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
